@@ -14,30 +14,35 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-x-hidden">
+      {/* PILLAR */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+        <div
+          className="
+            absolute inset-y-0 left-1/2 w-10/12
+            -translate-x-1/2
+            sm:-translate-x-[20%]
+            lg:-translate-x-[19%]
+            -translate-y-[10%]
+            lg:-translate-y-[15%]
+          "
+        >
+          <Image
+            src="/testfile/pillar.svg"
+            alt="Divine Pillar"
+            fill
+            priority
+            className="object-contain"
+            style={{ objectPosition: "top center" }}
+          />
+        </div>
+      </div>
 
-{/* PILLAR – middle layer */}
-<div className="absolute inset-y-0 left-1/2 -ml-[40%] w-10/12 z-10 pointer-events-none">
-
-
-  <div className="relative w-full h-full">
-    <Image
-      src="/testfile/pillar.svg"
-      alt="Divine Pillar"
-      fill
-      priority
-      className="object-contain"
-      style={{ objectPosition: "top center" }}
-    />
-  </div>
-</div>
-
-      {/* ALL CONTENT ABOVE PILLAR */}
+      {/* CONTENT */}
       <div className="relative">
-
-        {/* HERO SECTION */}
-        <div className="w-full h-screen overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-screen">
+        {/* HERO */}
+        <div className="w-full min-h-[100svh] overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full min-h-[100svh]">
             {heroImages.map((src, i) => (
               <div
                 key={i}
@@ -58,40 +63,25 @@ export default function Home() {
           </div>
         </div>
 
-        {/* SCROLL TEXT */}
-        <div className="w-full overflow-hidden bg-white py-8">
-          <div className="whitespace-nowrap animate-marquee text-black text-6xl font-serif font-semibold tracking-wide">
-            THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp; THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp; THE DIVINE CORE
+        {/* MARQUEE */}
+        <div className="w-full overflow-hidden bg-white py-6 sm:py-8">
+          <div className="whitespace-nowrap animate-marquee text-black text-3xl sm:text-4xl lg:text-6xl font-serif font-semibold tracking-wide">
+            THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp; THE DIVINE CORE
+            &nbsp;&nbsp;&nbsp;&nbsp; THE DIVINE CORE
           </div>
-
-          <style jsx>{`
-            .animate-marquee {
-              display: inline-block;
-              animation: marquee 25s linear infinite;
-            }
-            @keyframes marquee {
-              0% { transform: translateX(100%); }
-              100% { transform: translateX(-100%); }
-            }
-          `}</style>
         </div>
 
-        {/* EVENT SECTION */}
-<section className="relative mt-28">
-
+        {/* SECTIONS */}
+        <section className="relative mt-20 sm:mt-28">
           <EventSection />
         </section>
 
-        {/* ABOUT SECTION */}
         <section>
           <AboutSection />
         </section>
       </div>
 
-      {/* FOOTER */}
-      <section>
-        <Footer />
-      </section>
+      <Footer />
     </div>
   );
 }

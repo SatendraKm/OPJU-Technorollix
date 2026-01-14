@@ -15,14 +15,14 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex-shrink-0">
         <Link href={"/"}>
-        <Image
-          priority
-          src="/opjulogo.png"
-          alt="opju"
-          width={90}
-          height={40}
-          className="md:h-[60px] md:w-auto" // setting width to auto when height changes
-        />
+          <Image
+            priority
+            src="/opjulogo.png"
+            alt="opju"
+            width={90}
+            height={40}
+            className="md:h-[60px] md:w-auto" // setting width to auto when height changes
+          />
         </Link>
       </div>
 
@@ -53,22 +53,46 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-2 lg:space-x-6 bg-gradient-to-b from-[rgba(255,255,255,0.25)] to-[rgba(153,153,153,0)] backdrop-blur-md rounded-full p-2 pl-4 lg:pl-6 shadow-2xl">
         <div className="text-white text-sm lg:text-xl flex space-x-2 lg:space-x-6">
-          <Link href="/" className={pathname === "/" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"}>
+          <Link
+            href="/"
+            className={
+              pathname === "/" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"
+            }
+          >
             Home
           </Link>
-          <Link href="/events" className={pathname === "/events" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"}>
+          <Link
+            href="/events"
+            className={
+              pathname === "/events" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"
+            }
+          >
             Events
           </Link>
-          <Link href="/about" className={pathname === "/about" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"}>
+          <Link
+            href="/about"
+            className={
+              pathname === "/about" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"
+            }
+          >
             About
           </Link>
-          <Link href="/schedule" className={pathname === "/schedule" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"}>
+          <Link
+            href="/schedule"
+            className={
+              pathname === "/schedule"
+                ? "text-[#FFCF67]"
+                : "hover:text-[#FFCF67]"
+            }
+          >
             Schedule
           </Link>
-          <Link href="/aimbiation" className={pathname === "/aimbiation" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"}>
-            aiMBiAtion
-          </Link>
-          <Link href="/junoon" className={pathname === "/junoon" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"}>
+          <Link
+            href="/junoon"
+            className={
+              pathname === "/junoon" ? "text-[#FFCF67]" : "hover:text-[#FFCF67]"
+            }
+          >
             Junoon
           </Link>
         </div>
@@ -91,9 +115,6 @@ const Navbar = () => {
           </Link>
           <Link href="/schedule" className="block hover:text-[#FFCF67]">
             Schedule
-          </Link>
-          <Link href="/aimbiation" className="block hover:text-[#FFCF67]">
-            aiMBiAtion
           </Link>
           <Link href="/junoon" className="block hover:text-[#FFCF67]">
             Junoon
