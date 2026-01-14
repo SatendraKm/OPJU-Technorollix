@@ -14,27 +14,49 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative w-full overflow-x-hidden">
-      {/* PILLAR */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+    <div className="relative w-full overflow-hidden">
+      {/* PILLAR - Fixed positioning across entire page */}
+      <div className="absolute top-0 left-0 right-0 h-full pointer-events-none z-10">
         <div
           className="
-            absolute inset-y-0 left-1/2 w-10/12
-            -translate-x-1/2
-            sm:-translate-x-[20%]
+            absolute 
+            top-[-8%] sm:top-[-10%] lg:top-[-12%]
+            left-1/2 
+            w-[130%] sm:w-[95%] lg:w-[85%] xl:w-[75%]
+            h-[300%] sm:h-[120%] lg:h-[125%]
+            -translate-x-[19%]
+            sm:-translate-x-[30%]
+            md:-translate-x-[30%]
+            xl:-translate-x-[19%]
             lg:-translate-x-[19%]
-            -translate-y-[10%]
-            lg:-translate-y-[15%]
           "
         >
           <Image
-            src="/testfile/pillar.svg"
+            src="/testfile/pillar.png"
             alt="Divine Pillar"
             fill
             priority
-            className="object-contain"
-            style={{ objectPosition: "top center" }}
+            className="object-contain object-top"
           />
+        </div>
+      </div>
+
+      {/* TEXT OVERLAY ON FLAME */}
+      <div className="absolute top-0 left-0 right-0 h-full pointer-events-none z-20">
+        <div className="relative w-full h-screen flex items-center justify-center">
+          <p
+            className="
+            text-white text-center font-serif font-semibold
+            text-2xl sm:text-sm md:text-base lg:text-lg xl:text-xl
+            px-4 max-w-lg sm:max-w-lg lg:max-w-xl
+            leading-relaxed tracking-wide
+            absolute
+            top-[45%] sm:top-[38%] md:top-[40%] lg:top-[20%]
+            left-1/2 -translate-x-1/2
+          "
+          >
+            Central India&apos;s Biggest Annual Techno-Cultural Management Fest
+          </p>
         </div>
       </div>
 
