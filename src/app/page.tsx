@@ -22,7 +22,7 @@ export default function Home() {
             absolute 
             top-[-8%] sm:top-[-10%] lg:top-[-12%]
             left-1/2 
-            w-[150%] sm:w-[95%] lg:w-[85%] xl:w-[75%]
+            w-[130%] sm:w-[95%] lg:w-[85%] xl:w-[75%]
             h-[300%] sm:h-[120%] lg:h-[125%]
             -translate-x-[19%]
             sm:-translate-x-[30%]
