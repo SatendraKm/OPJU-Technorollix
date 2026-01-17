@@ -41,7 +41,7 @@ interface EventSectionProps {
 
 const EventSection: React.FC<EventSectionProps> = ({ title, events }) => (
   <>
-    {/* Background image */}
+  <div className="pb-32">
     <div
       className="absolute top-0 left-0 w-full pointer-events-none -z-10"
       id="bg-container"
@@ -79,30 +79,29 @@ const EventSection: React.FC<EventSectionProps> = ({ title, events }) => (
       ))}
     </div>
     <ButtonLanding label="Register" link="/dashboard" />
+    </div>
   </>
 );
 
 const Page = () => {
   return (
-    <div className="relative min-h-screen">
-      {/* 🌄 PAGE BACKGROUND */}
-      <div className="fixed inset-0 -z-10">
-        <Image
-          src="/testfile/bgevents1.jpeg"
-          alt="Events Background"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+    <div className="relative w-full">
+      {/* 🌄 BACKGROUND IMAGE THAT DEFINES PAGE HEIGHT */}
+      <img
+        src="/testfile/newevent.png"
+        alt="Background"
+        className="w-full h-auto block"
+      />
 
-      {/* CONTENT */}
-      <div className="events mt-10 md:mt-28 px-4 md:px-0 relative z-10">
-        <EventSection title="TECHNICAL EVENTS" events={eventsData.technical} />
-        <EventSection
-          title="NON-TECHNICAL EVENTS"
-          events={eventsData.nonTechnical}
-        />
+      {/* 🧱 CONTENT FLOATING ABOVE BACKGROUND */}
+<div className="absolute top-0 left-0 w-full h-full z-10 flex flex-col justify-between">
+        <div className="events mt-10 md:mt-28 px-4 md:px-0">
+          <EventSection title="TECHNICAL EVENTS" events={eventsData.technical} />
+          <EventSection
+            title="NON-TECHNICAL EVENTS"
+            events={eventsData.nonTechnical}
+          />
+        </div>
       </div>
     </div>
   );
