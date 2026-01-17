@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="relative w-full overflow-hidden">
-      {/* PILLAR - Fixed positioning across entire page */}
+      {/* PILLAR */}
       <div className="absolute top-0 left-0 right-0 h-full pointer-events-none z-10">
         <div
           className="
@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* TEXT OVERLAY ON FLAME */}
+      {/* TEXT OVERLAY */}
       <div className="absolute top-0 left-0 right-0 h-full pointer-events-none z-20">
         <div className="relative w-full h-screen flex items-center justify-center">
           <p
@@ -85,11 +85,24 @@ export default function Home() {
           </div>
         </div>
 
-        {/* MARQUEE */}
+        {/* CONTINUOUS MARQUEE */}
         <div className="w-full overflow-hidden bg-white py-6 sm:py-8">
-          <div className="whitespace-nowrap animate-marquee text-black text-3xl sm:text-4xl lg:text-6xl font-serif font-semibold tracking-wide">
-            THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp; THE DIVINE CORE
-            &nbsp;&nbsp;&nbsp;&nbsp; THE DIVINE CORE
+          <div className="marquee-wrapper">
+            <div className="marquee-track text-black text-3xl sm:text-4xl lg:text-6xl font-serif font-semibold tracking-wide">
+              
+              <span>
+                THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp;
+                THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp;
+                THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+
+              <span>
+                THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp;
+                THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp;
+                THE DIVINE CORE &nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+
+            </div>
           </div>
         </div>
 
@@ -104,6 +117,33 @@ export default function Home() {
       </div>
 
       <Footer />
+
+      {/* MARQUEE STYLES */}
+      <style>{`
+        .marquee-wrapper {
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .marquee-track {
+          display: flex;
+          width: max-content;
+          animation: marquee 16s linear infinite;
+        }
+
+        .marquee-track span {
+          white-space: nowrap;
+        }
+
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </div>
   );
 }

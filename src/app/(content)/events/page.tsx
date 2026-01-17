@@ -23,14 +23,14 @@ const eventsData = {
     { imageUrl: "/testfile/Roadies .png", link: "/events/roadies" },
     { imageUrl: "/testfile/Antaragni 1.png", link: "/events/antaragni" },
     //{ imageUrl: "/techno-events-logo/gamefusion.png", link: "/events/game-fusion" },
-    { imageUrl: "/testfile/Voice of Youth .png", link: "/events/yuva-sabha" },
-    { imageUrl: "/testfile/Beat Battle.png", link: "/events/beat-battle" },
+    { imageUrl: "/testfile/VoiceOfYouth.png", link: "/events/yuva-sabha" },
+    { imageUrl: "/testfile/BeatBattle.png", link: "/events/beat-battle" },
     {
       imageUrl: "/testfile/Start-up.png",
       link: "/events/start-up-business-plan",
     },
     { imageUrl: "/testfile/riywayat.png", link: "/events/riywayat" },
-    { imageUrl: "/testfile/AIMA’s 1.png", link: "/events/aima" },
+    { imageUrl: "/testfile/AIMA’s 1.png", link: "/events/AIMA" },
   ],
 };
 
